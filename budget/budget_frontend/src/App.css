@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+  /*background: pink;*/
+  margin: 0 1rem;
+}
+
+#LandingPage {
+  /*background: green;*/
+}
+
+#Register{
+  /*background: blue;*/
+}
+
+.menu {
+  margin-left: 2em;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.Navigation {
+  display: flex;
+  justify-content:flex-end;
+  font-size:1.5rem;
+  align-items: center;
+  /*padding: 1.5rem;*/
+  /*background: yellow;*/
+}
+
+.heading {
+  /*style={{display: 'flex', justifyContent: 'space-between'}}*/
+  display: flex;
+  align-items: center;
+}
+
+#MainPage {
+  display: flex;
+  /*background: turquoise;*/
+}
+
+#Sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  align-content: stretch;
+  /*max-width: 200px;*/
+  /*'w-25 pa2 mr2 ml2'*/
+  /*background: orange;*/
+}
+
+#Transaction {
+  flex-grow: 1;
+  border-style: solid;
+  /*background: beige;*/
+}
+
+#insertTransaction {
+  display: flex;
+  /*background-color: gray;*/
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  align-items: center;  
+  /*background-color: ruby;*/
+}
+
+.links {
+  align-self: center;
+  padding: .5rem;
+  font-size: 1.5rem;
+  color: black;
+  background: white;
+  border-radius: 1rem;
+  outline: solid;
+}
+
+.links:hover {
+  cursor: pointer;
+}
+
+.f3 {
+  font-size:1.5rem;
+  padding: 1.5rem;
+}
+
+.openSideBar {
+  transform: rotate(90deg);
+  width: 3rem;
+  padding: .75rem;
+}
+
+.openSideBar:hover {
+  cursor: pointer;
+}
+
+.closeSideBar {
+  transform: rotate(-90deg);
+  width: 3rem;
+  padding: .75rem;
+}
+
+.closeSideBar:hover {
+  cursor: pointer;
+}
+

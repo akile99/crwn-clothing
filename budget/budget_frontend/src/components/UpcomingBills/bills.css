@@ -1,0 +1,89 @@
+.heading {
+    display: flex;
+    flex-direction: row;
+    /*border-bottom: solid;*/
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+}
+
+.billDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.billTitle {
+    float: left;
+    width: 7em;
+    padding: .25rem;
+    text-align: center;
+    display: flex;
+    border-right: solid;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    /*border-bottom: none;*/
+    font-weight: bold;
+}
+
+.vendor {
+    float: left;
+    width: 25%;
+    padding: .25rem;
+    text-align: center;
+    display: flex;
+    border-bottom: solid;
+    border-right: solid;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bill {
+    float: left;
+    padding: .25rem;
+    text-align: center;    
+    display: flex;
+    border-bottom: solid;
+    border-right: solid;
+    margin: 0;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 1.5rem;
+    text-align: right;
+    padding-right: 1em;
+    width: 7em;
+}
+
+.duedate {
+    float: left;
+    width: 25%;
+    padding: .25rem;
+    text-align: center;  
+    display: flex;
+    border-bottom: solid;
+    border-right: solid;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.5rem;
+    text-align: right;
+    padding-right: 1em;
+    width: 7em;
+    /*outline fl w-25 pa1 tc*/
+}
+
+.editbill {
+    border-right: none;
+}
+
+.paybill:hover {
+    cursor: pointer;
+}
