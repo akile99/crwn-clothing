@@ -3,6 +3,7 @@
         "dzannotti.vscode-babel-coloring",
         "gerane.theme-bittersweet",
         "dbaeumer.vscode-eslint",
-        "aaronthomas.vscode-snazzy-operator"
+        "aaronthomas.vscode-snazzy-operator",
+        "esbenp.prettier-vscode"
     ]
 }
