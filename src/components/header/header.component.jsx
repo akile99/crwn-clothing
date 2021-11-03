@@ -1,6 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import { useSelector, useDispatch } from "react-redux";
 
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
@@ -17,34 +16,32 @@ import {
   OptionLink,
 } from "./header.styles";
 
-const Header = ({ currentUser, hideCartDropdown, signOutStart }) => (
-  <HeaderContainer>
-    <LogoContainer to="/">
-      <Logo className="logo" />
-    </LogoContainer>
-    <OptionsContainer>
-      <OptionLink to="/shop">SHOP</OptionLink>
-      <OptionLink to="/contact">CONTACT</OptionLink>
+const Header = () => {
+  const currentUser = useSelector(selectCurrentUser);
+  const hideCartDropdown = useSelector(selectCartHidden);
+  const dispatch = useDispatch();
 
-      {currentUser ? (
-        <OptionLink as="div" onClick={signOutStart}>
-          SIGN OUT
-        </OptionLink>
-      ) : (
-        <OptionLink to="/signin">SIGN IN</OptionLink>
-      )}
-      <CartIcon />
-    </OptionsContainer>
-    {hideCartDropdown ? null : <CartDropdown />}
-  </HeaderContainer>
-);
+  return (
+    <HeaderContainer>
+      <LogoContainer to="/">
+        <Logo className="logo" />
+      </LogoContainer>
+      <OptionsContainer>
+        <OptionLink to="/shop">SHOP</OptionLink>
+        <OptionLink to="/contact">CONTACT</OptionLink>
 
-const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-  hideCartDropdown: selectCartHidden,
-});
+        {currentUser ? (
+          <OptionLink as="div" onClick={() => dispatch(signOutStart())}>
+            SIGN OUT
+          </OptionLink>
+        ) : (
+          <OptionLink to="/signin">SIGN IN</OptionLink>
+        )}
+        <CartIcon />
+      </OptionsContainer>
+      {hideCartDropdown ? null : <CartDropdown />}
+    </HeaderContainer>
+  );
+};
 
-const mapDispatchToProps = (dispatch) => ({
-  signOutStart: () => dispatch(signOutStart()),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;
